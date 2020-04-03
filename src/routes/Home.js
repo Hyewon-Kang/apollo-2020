@@ -22,7 +22,7 @@ const Container = styled.div`
 `;
 
 const Header = styled.header`
-  background-image: linear-gradient(-45deg, #d754ab, #fd723a);
+  background-image: linear-gradient(-45deg, #000046, #1CB5E0);
   height: 45vh;
   color: white;
   display: flex;
@@ -52,8 +52,8 @@ const Loading = styled.div`
 const Movies = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 25px;
-  width: 60%;
+  grid-gap: 35px;
+  width: 70%;
   position: relative;
   top: -50px;
 `;

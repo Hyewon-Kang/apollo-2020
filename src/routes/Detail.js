@@ -22,9 +22,12 @@ const GET_MOVIE = gql`
   }
 `;
 
+
 const Container = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+  font-family: "Open Sans", sans-serif;
   height: 100vh;
-  background-image: linear-gradient(-45deg, #d754ab, #fd723a);
+  background-image: linear-gradient(-45deg, #000046, #1CB5E0);
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -43,22 +46,25 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.h4`
-  font-size: 35px;
-  margin-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 50px;
 `;
 
 const Description = styled.p`
-  font-size: 28px;
+  margin: 5px;
+  font-size: 20px;
 `;
 
+
 const Poster = styled.div`
-  width: 25%;
+  width: 20%;
   height: 60%;
   background-color: transparent;
   background-image: url(${props => props.bg});
   background-size: cover;
   background-position: center center;
 `;
+
 
 export default () => {
   let { id } = useParams();
@@ -80,7 +86,6 @@ export default () => {
       </Column>
       <Poster bg={data?.movie?.medium_cover_image}></Poster>
       {/* {data && data.suggestions && data.suggestions.map(s => )} */}
-    
     </Container>
   );
 };
